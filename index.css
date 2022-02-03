@@ -1,0 +1,203 @@
+body {
+  background-color: gray;
+}
+
+/* -------------------------------------------- */
+
+/* Form container start */
+
+.form-container {
+  width: 60%;
+  background-color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.form-row {
+  padding: 10px 0;
+  display: flex;
+}
+
+.form-row label {
+  padding-right: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* Form container end */
+
+/* -------------------------------------------- */
+
+/* Main text container start */
+
+.main-text-container {
+  width: 90%;
+  background-color: white;
+  margin: 10px auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  line-height: 1.35;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/* Main text container end */
+
+/* -------------------------------------------- */
+
+/* Call outs container start */
+
+.call-outs-container {
+  width: 90%;
+  margin: 10px auto;
+  align-items: stretch; /* other options: flex-start, flex-end  */
+  }
+
+.call-out {
+  padding: 20px;
+  flex-basis: 30%; /* sames as width */
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.call-out:nth-child(1) {
+  background-color: rgb(188, 236, 238);
+}
+
+.call-out:nth-child(2) {
+  background-color: rgb(197, 251, 199);
+}
+
+.call-out:nth-child(3) {
+  background-color: rgb(250, 229, 181);
+}
+
+/* Call outs container end */
+
+/* -------------------------------------------- */
+
+/* Link container start */
+
+.link-container{
+    width: 50%;
+    height: 100px;
+    margin: 10px auto;
+    display: flex;
+    background-color: rgb(112, 146, 143);
+    transition-property: background-color, border-radius, transform;
+    transition-duration: 1s;
+}
+
+.link-container:hover{
+    background-color: rgb(200, 142, 200);
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+ .link-container a{
+     text-decoration: none;
+     margin: auto;
+     color: white;
+ }
+
+/* Link container end */
+
+/* -------------------------------------------- */
+
+/* Numbers container start */
+
+.numbers-container{
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.numbers{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(250, 135, 135);
+    margin-bottom: 10px;
+}
+
+.numbers h2{
+    color: white;
+    margin: auto auto;
+}
+
+/* Numbers container end */
+
+/* -------------------------------------------- */
+
+/* Equal hight container start */
+
+.equal-hight-container{
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+}
+
+.first-column{
+    flex: 1;
+}
+
+.second-column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-column .second-a{
+    background-color: rgb(118, 180, 174);
+    flex: 1;
+}
+
+.second-column .second-b{
+    background-color: rgb(190, 190, 110);
+    flex: 1;
+}
+
+/* Equal hight container end */
+
+/* -------------------------------------------- */
+
+/* Design for desktop devices min 900px start */
+
+@media (min-width: 900px) {
+  .call-outs-container {
+    display: flex;
+    justify-content: space-between; /* adds margins between columns */
+  }
+
+  .main-column {
+    flex: 2; /* two times bigger */
+    order: 2;
+  }
+  
+  .sidebar-one {
+    flex: 1;
+    order: 1;
+  }
+  
+  .sidebar-two {
+    flex: 1;
+    order: 3;
+  }
+}
+
+/* Design for desktop min 900px devices end */
+
+/* -------------------------------------------- */
