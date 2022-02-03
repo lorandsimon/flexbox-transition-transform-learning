@@ -2,6 +2,36 @@ body {
   background-color: gray;
 }
 
+.star{
+    height: auto;
+    width: 25%;
+    -webkit-animation: slideSpin 2s infinite alternate forwards;
+    animation: slideSpin 2s infinite alternate forwards;
+    /* animation-fill-mode: ;
+    animation-iteration-count: ;
+    animation-direction: ; */
+}
+
+/* Star animation start */
+
+@-webkit-keyframes slideSpin {
+    50% {
+        transform: translatex(150%) scale(.5);
+    }
+
+    75% {
+        transform: translateX(150%) rotate(180deg) scale(.5);
+    }
+
+    100% {
+        transform: translateX(300%) rotate(180deg);
+    }
+  }
+  
+  /* Star animation end */
+  
+  /* -------------------------------------------- */
+
 .circle {
   width: 200px;
   height: 200px;
@@ -18,15 +48,24 @@ body {
   );
   margin: 10px auto;
   border: 2px solid rgb(255, 255, 255);
-  transition: all 3s ease-out;
+  transition: all 2.5s ease-out;
 }
 
 .circle:hover {
-  transform: rotate(360deg);
+  transform: rotate(360deg) scale(1.5);
+}
+
+.animation-container {
+  width: 70%;
+  display: flex;
+  border: 2px solid black;
+  margin: 10px auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .bounce-animation-container {
-  width: 25%;
+  flex-basis: 200px;
   height: 50px;
   background-color: lightblue;
   margin: 10px auto;
@@ -34,8 +73,8 @@ body {
   box-shadow: 5px 10px 5px black;
   text-align: center;
   display: flex;
-  animation-name: fadeBounceDown;
-  animation-duration: 1.5s;
+  -webkit-animation: fadeBounceDown 1.5s;
+  animation: fadeBounceDown 1.5s;
 }
 
 .bounce-animation-container p {
@@ -46,7 +85,7 @@ body {
 
 /* Bounce animation start */
 
-@keyframes fadeBounceDown {
+@-webkit-keyframes fadeBounceDown {
   0% {
     opacity: 0;
     transform: translateY(-200%);
