@@ -128,6 +128,12 @@ body {
     height: 150px;
     background-color: rgb(250, 135, 135);
     margin-bottom: 10px;
+    transition: all 1s;
+}
+
+.numbers:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .numbers h2{
