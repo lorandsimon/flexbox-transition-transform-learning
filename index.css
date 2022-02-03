@@ -2,6 +2,83 @@ body {
   background-color: gray;
 }
 
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  margin: 10px auto;
+  border: 2px solid rgb(255, 255, 255);
+  transition: all 3s ease-out;
+}
+
+.circle:hover {
+  transform: rotate(360deg);
+}
+
+.bounce-animation-container {
+  width: 25%;
+  height: 50px;
+  background-color: lightblue;
+  margin: 10px auto;
+  border-radius: 5px 5px 10px 10px;
+  box-shadow: 5px 10px 5px black;
+  text-align: center;
+  display: flex;
+  animation-name: fadeBounceDown;
+  animation-duration: 1.5s;
+}
+
+.bounce-animation-container p {
+  margin: auto;
+}
+
+/* -------------------------------------------- */
+
+/* Bounce animation start */
+
+@keyframes fadeBounceDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  55% {
+    opacity: 0.7;
+    transform: translateY(-6px);
+  }
+
+  70% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+
+  85% {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bounce animation end */
+
 /* -------------------------------------------- */
 
 /* Form container start */
@@ -44,8 +121,6 @@ body {
   flex-wrap: wrap;
 }
 
-
-
 /* Main text container end */
 
 /* -------------------------------------------- */
@@ -56,7 +131,7 @@ body {
   width: 90%;
   margin: 10px auto;
   align-items: stretch; /* other options: flex-start, flex-end  */
-  }
+}
 
 .call-out {
   padding: 20px;
@@ -83,27 +158,27 @@ body {
 
 /* Link container start */
 
-.link-container{
-    width: 50%;
-    height: 100px;
-    margin: 10px auto;
-    display: flex;
-    background-color: rgb(112, 146, 143);
-    transition-property: background-color, border-radius, transform;
-    transition-duration: 1s;
+.link-container {
+  width: 50%;
+  height: 100px;
+  margin: 10px auto;
+  display: flex;
+  background-color: rgb(112, 146, 143);
+  transition-property: background-color, border-radius, transform;
+  transition-duration: 1s;
 }
 
-.link-container:hover{
-    background-color: rgb(200, 142, 200);
-    border-radius: 50%;
-    transform: scale(1.2);
+.link-container:hover {
+  background-color: rgb(200, 142, 200);
+  border-radius: 50%;
+  transform: scale(1.2);
 }
 
- .link-container a{
-     text-decoration: none;
-     margin: auto;
-     color: white;
- }
+.link-container a {
+  text-decoration: none;
+  margin: auto;
+  color: white;
+}
 
 /* Link container end */
 
@@ -111,34 +186,34 @@ body {
 
 /* Numbers container start */
 
-.numbers-container{
-    width: 90%;
-    background-color: white;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    justify-content: space-around;
+.numbers-container {
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  justify-content: space-around;
 }
 
-.numbers{
-    display: flex;
-    width: 150px;
-    height: 150px;
-    background-color: rgb(250, 135, 135);
-    margin-bottom: 10px;
-    transition: all 1s;
+.numbers {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(250, 135, 135);
+  margin-bottom: 10px;
+  transition: all 1s;
 }
 
-.numbers:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+.numbers:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
-.numbers h2{
-    color: white;
-    margin: auto auto;
+.numbers h2 {
+  color: white;
+  margin: auto auto;
 }
 
 /* Numbers container end */
@@ -147,33 +222,33 @@ body {
 
 /* Equal hight container start */
 
-.equal-hight-container{
-    width: 90%;
-    margin: 10px auto;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    background-color: white;
-    display: flex;
+.equal-hight-container {
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
 }
 
-.first-column{
-    flex: 1;
+.first-column {
+  flex: 1;
 }
 
-.second-column{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.second-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.second-column .second-a{
-    background-color: rgb(118, 180, 174);
-    flex: 1;
+.second-column .second-a {
+  background-color: rgb(118, 180, 174);
+  flex: 1;
 }
 
-.second-column .second-b{
-    background-color: rgb(190, 190, 110);
-    flex: 1;
+.second-column .second-b {
+  background-color: rgb(190, 190, 110);
+  flex: 1;
 }
 
 /* Equal hight container end */
@@ -192,12 +267,12 @@ body {
     flex: 2; /* two times bigger */
     order: 2;
   }
-  
+
   .sidebar-one {
     flex: 1;
     order: 1;
   }
-  
+
   .sidebar-two {
     flex: 1;
     order: 3;
