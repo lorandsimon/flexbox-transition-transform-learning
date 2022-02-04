@@ -12,6 +12,85 @@ body {
     animation-direction: ; */
 }
 
+  /* Slideshow start */
+
+  .cycle-slideshow{
+    width: fit-content;
+  }
+
+  .slide{
+    position: relative;
+  }
+
+  .slide img{
+    display: block;
+    max-width: 100%;
+  }
+
+  .slide-text{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.571);
+    color: white;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+  }
+
+  .slide-text h3{
+    margin: 0;
+  }
+
+  .cycle-prev, .cycle-next{
+    position: absolute;
+    top: 30%;
+    background-color: rgba(0, 0, 0, 0.571);
+    color: white;
+    z-index: 1000;
+    padding: 5px 10px;
+    /* display: block; */
+    cursor: pointer;
+    font-size: 120%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .cycle-next{
+    right: 0;
+  }
+
+  .cycle-slideshow:hover .cycle-prev,
+  .cycle-slideshow:hover .cycle-next{
+    opacity: 1;
+  }
+  
+  .cycle-pager{
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    letter-spacing: 10px;
+    cursor: pointer;
+    font-size: 150%;
+  }
+
+  .cycle-pager-active{
+    color: black;
+  }
+
+  .btn-youtube{
+    
+  }
+
+   /* Slideshow end */
+  
+  /* -------------------------------------------- */
+
 /* Star animation start */
 
 @-webkit-keyframes slideSpin {
@@ -252,7 +331,7 @@ body {
 
 .numbers h2 {
   color: white;
-  margin: auto auto;
+  margin: auto;
 }
 
 /* Numbers container end */
